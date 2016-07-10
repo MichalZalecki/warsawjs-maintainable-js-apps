@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WarsawJS Slides: Template</title>
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <!-- Shower Theme -->
+    <link rel="stylesheet" href="vendors/shower-ribbon/styles/screen-16x10.css"/>
+    <link rel="stylesheet" href="vendors/shower-warsawjs/styles/main.css"/>
+
+    <!-- Prism.js -->
+    <link rel="stylesheet" href="vendors/prism/prism.css"/>
+    <link rel="stylesheet" href="vendors/prism/custom-prism.css"/>
+    <link rel="stylesheet" href="css/style.css"/>
+</head>
+<body class="shower list">
+    <header class="caption">
+        <h1>Bulletproof and Maintainable JS Applications</h1>
+        <p>Scalable JavaScript applications that are easy to tests and maintain.</p>
+    </header>
+
+    <section class="slide front-page">
+        <div class="logo">
+            <!-- Logo WarsawJS -->
+            <img src="pictures/logo/warsawjs-logo-light.png">
+        </div>
+        <div class="details">
+            <!-- 1. Avatar -->
+            <img src="pictures/michal-zalecki.jpg" alt="Speaker"/>
+
+            <!-- 2. Speaker -->
+            <h2>Michał Załęcki, woumedia</h2>
+
+            <!-- 3. Presentation title -->
+            <h2><strong>Bulletproof and Maintainable JS Applications</strong></h2>
+
+            <!-- 4. Presentation date -->
+            <h2>13th July 2016</h2>
+
+            <!-- 5. Contact the speaker -->
+            <h2><a href="http://twitter.com/MichalZalecki">@MichalZalecki</a></h2>
+        </div>
+    </section>
+
+    <section class="slide">
+      <h2>What I'm going to talk about</h2>
+      <ul>
+        <li class="next">approaches</li>
+        <li class="next">patterns</li>
+        <li class="next">overall tips</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>What I'm not going to talk about</h2>
+      <ul>
+        <li class="next">testing</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>MVC</h2>
+      <ul>
+        <li class="next">since 1976 (introduced in Smalltalk-76)</li>
+        <li class="next">works<span class="next">... on the server</span></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>MVC</h2>
+      <img src="pictures/content/mvc.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <img src="pictures/content/ben-lesh.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>MVC-ish</h2>
+      <ul>
+        <li class="next">MVC</li>
+        <li class="next">MVVM</li>
+        <li class="next">MVP</li>
+        <li class="next">MVW
+          <img
+            src="pictures/content/troll.png"
+            class="next"
+            style="width: 35px; position: relative; top: 7px; left: 5px;"
+          />
+        </li>
+      </ul>
+      <ul>
+        <li class="next">MV* gets really complicated really quickly</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">MVC</h2>
+      <img src="pictures/content/mvc-frontend.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">MVC</h2>
+      <img src="pictures/content/mvc-scale.png" class="mz-content-img">
+    </section>
+
+
+    <section class="slide">
+      <h2 class="mz-text-right">MVVM</h2>
+      <img src="pictures/content/mvvm.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>Flux</h2>
+      <ul>
+        <li class="next">"An Application Architecture for React"</li>
+        <li class="next">Unidirectional data flow</li>
+        <li class="next">Uses subset of Pub/Sub</li>
+        <li class="next">Introduced by Jing Chen, Software Enginieer at Facebook in talk called "Rethinking Web App Development at Facebook"</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Flux</h2>
+      <img src="pictures/content/flux.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Flux</h2>
+      <img src="pictures/content/flux-scale.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>Redux</h2>
+      <ul>
+        <li class="next">Predictable state container for JavaScript apps</li>
+        <li class="next">Extensible thanks to robust middleware</li>
+        <li class="next">Great community</li>
+        <li class="next">Hot Module Replacement (reducers)</li>
+        <li class="next">Time Traveling Debugger</li>
+        <li class="next">DevTools extension</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Redux</h2>
+      <img src="pictures/content/redux.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Redux</h2>
+      <img src="pictures/content/redux-scale.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Redux: Root Reducer</h2>
+      <img src="pictures/content/redux-rootreducer.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Redux: Containers</h2>
+      <img src="pictures/content/redux-containers.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>Reducing side effects</h2>
+      <ul>
+        <li class="next">Extreacting side effects to separate part of the applicatiion allows for writing pure functions everyware else</li>
+        <li class="next">One place to deal with localStorage, redirects and such</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <img src="pictures/content/reduce-side-effects.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>Redux Saga</h2>
+      <ul>
+        <li class="next">Side Effects middleware (aka Asynchronous Actions) for Redux applications</li>
+        <li class="next">Responsible for orchestrating complex/asynchronous operations</li>
+        <li class="next">Composable</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">Redux Saga</h2>
+      <img src="pictures/content/redux-saga.png" class="mz-content-img">
+    </section>
+
+    <section class="slide prism">
+      <h2>Redux Saga</h2>
+      <pre style="font-size: 21px;" class="language-javascript line-numbers">
+        <code style="line-height: 35px;">
+          export function* deliverShipmentSaga({ payload, meta: { token } }) {
+            yield put(activateLoader());
+            const { response, error } = yield call(api.deliverShipment, payload, token);
+            if (response) {
+              yield put(deliverShipmentSuccess(response));
+              const toast = { content: "Shipment marked as delivered.", type: "success" };
+              yield fork(addToastAndRemoveIn, toast, 3000);
+            } else {
+              yield put(deliverShipmentFailure(error));
+              yield fork(handleError, "cannot mark shipment as delivered", error);
+            }
+            yield put(deactivateLoader());
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Reactive State</h2>
+      <ul>
+        <li class="next">Update only connected modules</li>
+        <li class="next">No redundant checks</li>
+        <li class="next"><a href="https://github.com/MichalZalecki/connect-rxjs-to-react">MichalZalecki/connect-rxjs-to-react</a></li>
+      </ul>
+    </section>
+
+    <section class="slide prism">
+      <h2>Reactive State</h2>
+      <pre style="font-size: 21px;" class="language-javascript line-numbers">
+        <code style="line-height: 35px;">
+          import Rx from "rxjs";
+
+          function createState(reducer$, initialState$ = Rx.Observable.of({})) {
+            return initialState$
+              .merge(reducer$)
+              .scan((state, [scope, reducer]) =>
+                ({ ...state, [scope]: reducer(state[scope]) }))
+              .publishReplay(1)
+              .refCount();
+          }
+
+          export default createState;
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide prism">
+      <h2>Reactive State: connect</h2>
+      <pre style="font-size: 21px;" class="language-javascript line-numbers">
+        <code style="line-height: 35px;">
+          function connect(state$, selector = state => state) {
+            return function wrapWithConnect(WrappedComponent) {
+              return class Connect extends React.Component {
+                componentWillMount() {
+                  this.subscription = state$.map(selector).subscribe(::this.setState);
+                }
+                componentWillUnmount() {
+                  this.subscription.unsubscribe();
+                }
+                render() { ... }
+              };
+            }
+          }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Model-View-Intent</h2>
+      <ul>
+        <li class="next">Focused on Human-Computer interaction</li>
+        <li class="next">Reactive</li>
+        <li class="next">Whole application is build from pure functions</li>
+        <li class="next">Side effects happen inside drivers which you probably not going to write</li>
+        <li class="next">Developed for <a href="http://cycle.js.org/">Cycle.js</a></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">MVI</h2>
+      <img src="pictures/content/mvi.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2 class="mz-text-right">MVI</h2>
+      <img src="pictures/content/mvi-scale.png" class="mz-content-img">
+    </section>
+
+    <section class="slide">
+      <h2>Use object mappers</h2>
+      <ul>
+        <li class="next">Normalize API communication</li>
+        <li class="next">Flatten nested responses</li>
+        <li class="next">Solve inconsistency between empty string, <mark>null</mark> and <mark>undefined</mark></li>
+        <li class="next">Omit values based on the predicate</li>
+        <li class="next"><a href="https://github.com/MichalZalecki/mappet">MichalZalecki/mappet</a></li>
+      </ul>
+    </section>
+
+    <section class="slide prism">
+      <h2>mappet</h2>
+      <pre style="font-size: 21px;" class="language-javascript line-numbers">
+        <code style="line-height: 35px;">
+          const schema = [
+            ["firstName", "first_name", text => text.toUpperCase()],
+            ["cardNumber", "card.number"],
+          ];
+
+          const mapper = mappet(schema);
+          const source = { first_name: "Michal", age: 21, card: { number: "555..." } };
+          const result = mapper(source);
+
+          // {
+          //   firstName: "MICHAL",
+          //   cardNumber: "5555-5555-5555-4444"
+          // }
+        </code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Use TypeScript or Frow</h2>
+    </section>
+
+    <section class="slide">
+      <h2>Use ESLint</h2>
+      <ul>
+        <li class="next">Pluggable linting utility for JavaScript and JSX</li>
+        <li class="next"><a href="https://github.com/airbnb/javascript">airbnb/javascript</a></li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Build from modules</h2>
+      <ul>
+        <li class="next">Good module is independent, small and reusable</li>
+        <li class="next">Keep your modules stateless</li>
+        <li class="next">Avoid tight coupling (e.g. with base library)</li>
+        <li class="next">Isolate modules</li>
+        <li class="next">Access module only though its interface</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Name things correctly</h2>
+      <ul>
+        <li class="next">Use short but descriptive names</li>
+        <li class="next">Don't <mark>Helper</mark> and <mark>Utils</mark>, you can do better than that!</li>
+        <li class="next">Be consistent</li>
+        <li class="next"><mark>If applied, this commit will</mark>&hellip;<br />git commit -m "<mark>Extract responsibility of loading state from orderReducer</mark>"</li>
+      </ul>
+    </section>
+
+    <section class="slide">
+      <h2>Questions?</h2>
+    </section>
+
+    <div class="progress"></div>
+
+    <footer class="badge">
+        <a href="https://github.com/warsawjs/warsawjs-slides-template">Fork me on GitHub</a>
+    </footer>
+
+    <footer class="badge badge-down">
+        <a href="#" class="fullscreen">Fullscreen</a>
+    </footer>
+
+    <script src="vendors/gamepad/gamepad.js"></script>
+    <script src="vendors/shower/shower.min.js"></script>
+    <script src="vendors/shower-gamepad/shower.gamepad.js"></script>
+    <script src="modules/fullscreen.js"></script>
+
+    <!-- Prism.js -->
+    <script src="vendors/prism/prism.js"></script>
+    <script src="vendors/prism/custom-prism.js"></script>
+</body>
+</html>
