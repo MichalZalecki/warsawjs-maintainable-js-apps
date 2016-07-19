@@ -1,5 +1,5 @@
 .slide h2 {
-    color: #f7302f;
+    color: #61DAFB;
     font-weight: normal;
     font-family: firalight, sans-serif;
 }
@@ -13,7 +13,7 @@
 }
 
 .slide b, .slide strong {
-    color: #f7302f;
+    color: #61DAFB;
 }
 
 .slide a {
@@ -25,7 +25,7 @@
 }
 
 .slide pre mark.important {
-    background-color: #f7302f;
+    background-color: #61DAFB;
 }
 
 .slide p {
@@ -33,5 +33,5 @@
 }
 
 .full .progress {
-    border-color: transparent transparent #f7302f;
+    border-color: transparent transparent #61DAFB;
 }

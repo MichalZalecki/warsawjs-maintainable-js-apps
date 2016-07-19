@@ -5,7 +5,7 @@
 }
 
 .badge.badge-down a {
-    background: #f7302f;
+    background: #61DAFB;
     -webkit-transform: rotate(675deg) translateY(2em);
     -ms-transform: rotate(675deg) translateY(2em);
     transform: rotate(675deg) translateY(2em);
